@@ -58,6 +58,21 @@
 3. 截获变量。对于基本数据类型的局部变量截获其值。对于对象类型的局部变量连同所有权修饰符一起截获。以指针形式截获局部静态变量。不截获全局变量、静态全局变量。
 clang -rewrite-objc
 
+### 10.网络
+
+HTTP:请求、响应报文
+请求方式：GET POST HEAD PUT DELETE OPTIONS
+GET请求参数以?分割拼接到URL后面，POST请求参数在Body里面。GET长度限制2048字符，GET不安全。
+语义：GET：获取资源 不引起Server端任何状态变化，执行一次和多次效果相同，可缓存的 POST：处理资源
+
+状态码：1xx 2xx响应成功 3xx网络重定向 4xx网络异常，请求有问题 5xxserver异常
+
+连接建立流程：Client 1.SYN Server 2.SYN,ACK 3.ACK 4.http请求报文 5.http响应报文 6.FIN 7.ACK 8.FIN,ACK 9.ACK
+
+HTTP的特点：无连接
+
+Charles抓包
+
 ### 13.算法
 
 
